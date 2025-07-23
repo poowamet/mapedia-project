@@ -4,7 +4,11 @@ module.exports = {
     "./src/**/*.{html,ts}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['"IBM Plex Sans Thai"', 'ui-sans-serif', 'system-ui'],
+      },
+    },
   },
   plugins: [],
 }

@@ -54,7 +54,7 @@
   <div *ngIf="currentView === 'grid'"
     class="grid grid-cols-1 [@media(min-width:1100px)]:grid-cols-2 [@media(min-width:1500px)]:grid-cols-4 gap-6 mb-8 w-full">
     <div *ngFor="let project of displayedProjects"
-      class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
+      class="bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer"
       (click)="selectProject(project)">
 
       <!-- Project Image -->
@@ -63,8 +63,8 @@
       </div>
 
       <!-- Project Info -->
-      <div class="flex flex-row p-4 justify-between">
-        <div class="font-semibold text-gray-800 mb-2 truncate text-sm">{{project.name}}</div>
+      <div class="flex items-center flex-row py-2 px-3 justify-between">
+        <div class="font-semibold text-gray-800 truncate text-sm">{{project.name}}</div>
         <div class="flex flex-row items-center justify-end">
           @if(project.status === 'succeed'){
           <img src="assets/icon/database_succeed.png" class="w-5">

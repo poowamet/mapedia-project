@@ -12,7 +12,7 @@
       <div class="justify-center">
         <img src="assets/icon/more.png" class="h-5 w-auto">
       </div>
-      <span class="text-sm font-bold text-gray-600" (click)="gohome()">Projects</span>
+      <div class="text-sm font-bold text-gray-600 cursor-pointer" (click)="gohome()">Projects</div>
       <div class="justify-center">
         <img src="assets/icon/more.png" class="h-5 w-auto">
       </div>
@@ -59,7 +59,7 @@
     class="grid grid-cols-1 [@media(min-width:1100px)]:grid-cols-2 [@media(min-width:1500px)]:grid-cols-4 gap-6 mb-8 w-full">
     <ng-container *ngIf="displayedimages.length > 0; else noImages">
       <div *ngFor="let project of displayedimages"
-        class="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
+        class="bg-white rounded-3xl shadow-md overflow-hidden hover:shadow-lg transition-shadow cursor-pointer">
 
         <!-- Project Image -->
         <div class="relative">
@@ -67,8 +67,8 @@
         </div>
 
         <!-- Project Info -->
-        <div class="flex flex-row p-4 justify-between">
-          <div class="font-semibold text-gray-800 mb-2 truncate text-sm">{{project.file_name}}</div>
+        <div class="flex flex-row py-2 px-3 justify-between items-center">
+          <div class="font-semibold text-gray-800 truncate text-sm">{{project.file_name}}</div>
           <div class="flex flex-row items-center justify-end">
             <img src="assets/icon/image.png" class="w-5">
             <button class="text-gray-400 hover:text-gray-600 pl-4">
